@@ -4,6 +4,7 @@ use std::net::TcpStream;
 
 pub mod executor;
 pub mod requests;
+pub mod responses;
 
 fn main() -> io::Result<()> {
     let stream = TcpStream::connect("www.google.com:80")?;

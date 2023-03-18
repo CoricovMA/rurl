@@ -1,3 +1,1 @@
-pub struct Response {
-# test
-}
+pub struct Response {}

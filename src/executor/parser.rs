@@ -4,6 +4,7 @@ use std::{
 };
 
 use crate::requests::requests::Request;
+use crate::responses::responses::Response;
 
 pub struct Streamer {
     reader: io::BufReader<TcpStream>,
@@ -23,5 +24,7 @@ impl Streamer {
         Ok(())
     }
 
-    pub fn read_response(&mut self) -> io::Result<Response> {}
+    pub fn read_response(&mut self) -> io::Result<()> {
+        Ok(())
+    }
 }
