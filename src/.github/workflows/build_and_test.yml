@@ -1,0 +1,13 @@
+name: Build and Test
+on: [push, pull_request, pull_request_target]
+
+jobs:
+  build_and_test:
+    name: Build and Test Rust project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - run: cargo build --release --all-features
